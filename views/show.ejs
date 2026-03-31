@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust</title>
+
+
+
+
+</head>
+<body>
+  <h3>listing Details</h3>
+
+  <ul>
+<li><%=listing.title%></li>
+<li><%=listing.description%></li>
+<li>
+  <% if (listing.price !=null && listing.price !==undefined){ %>
+&#8377;<%= Number(listing.price).toLocaleString("en-IN") %>
+
+<% } else { %>
+  Price not available
+<% } %>
+
+
+
+</li>
+
+
+<li><%=listing.location || "Location not available" %></li>
+<li><%=listing.country   || "Country not available" %></li>
+
+
+
+
+  </ul> 
+
+
+
+
+
+</body>
+</html>
